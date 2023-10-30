@@ -1,0 +1,19 @@
+.logo{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa toda a altura da tela */
+}
+.bloco{ 
+  display: block;
+}
+mat-card{ 
+  border: 1px solid rgb(231, 225, 225);
+}
+img{
+  height: 250px;
+}

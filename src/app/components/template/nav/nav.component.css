@@ -1,0 +1,14 @@
+.sidenave{
+    background-color: rgb(4, 100, 226);
+    width: 200px;
+}
+.sidenave a {
+    color: aliceblue;
+}
+.sidenave i {
+    padding-right: 10px;
+}
+
+.content {
+    padding: 16px;
+}

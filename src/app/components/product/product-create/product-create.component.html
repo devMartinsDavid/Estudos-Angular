@@ -1,0 +1,41 @@
+<mat-card class="container">
+    <mat-card-header class="texto-center">
+        <mat-card-title>Novo Produto</mat-card-title>
+    </mat-card-header>
+    <img matCardImage src="./../../../../assets/image/imagem-exemplo-table.png" height="150px" alt="imagem-exemplo">
+    <mat-card-content class="mt-4">
+        <form>
+            <mat-form-field>
+                <input appValidations matInput placeholder="nome" 
+                [(ngModel)]="product.name"
+                name="name"
+                >
+            </mat-form-field>
+            <mat-form-field>
+                <input appValidations matInput placeholder="Preço (R$)"
+                [(ngModel)]="product.price"
+                name="price"
+                >
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+    <mat-card-actions align="start" class="centralizar">
+        <button mat-raised-button (click)="createProduct()"
+        color="primary" class="btn btn-success"
+        >Criar Produto</button>
+
+        <button mat-raised-button (click)="cancel()"
+        color="primary" class="btn btn-danger" subtmit
+        >Cancelar</button>
+
+    </mat-card-actions>
+    
+</mat-card>
+
+
+
+
+
+
+
+

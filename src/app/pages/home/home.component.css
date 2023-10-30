@@ -1,0 +1,18 @@
+.container{
+    margin-top: 10%;
+}
+.home{
+    height: 200px;
+    background-color: aqua;
+}
+.color{
+    color: black;
+}
+.title{
+    font-size: 3rem;
+    margin-top: 50px;
+}
+.subtitle{ 
+    font-size: 1.5rem;
+    margin-top: 20px;
+}

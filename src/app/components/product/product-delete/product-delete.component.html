@@ -1,0 +1,25 @@
+<mat-card class="container">
+    <mat-card-header class="centralizar">
+        <mat-card-title>Excluir Produto</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form *ngIf="product">
+            <mat-form-field>
+                <mat-label>Nome</mat-label>
+                <input matInput [value]="product.name" disabled>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Nome</mat-label>
+                <input matInput [value]="product.price" disabled>
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+    <mat-card-actions align="start" class="centralizar">
+        <button (click)="deleteProduct()"
+        class="btn btn-success"
+        >Confirmar Exclusão</button>
+        <button (click)="cancel()"
+        class="btn btn-danger"
+        >Cancelar</button>
+    </mat-card-actions>
+</mat-card>

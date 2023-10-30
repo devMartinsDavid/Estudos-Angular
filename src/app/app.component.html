@@ -1,0 +1,11 @@
+<!-- Layout da página de login -->
+<ng-container *ngIf="currentLayout === 'login'">
+    <app-login></app-login>
+</ng-container>
+
+<!-- Layout principal (após o login) -->
+<ng-container *ngIf="currentLayout === 'home' ">
+    <app-header></app-header>
+    <app-nav></app-nav>
+    <app-footer></app-footer>
+</ng-container>

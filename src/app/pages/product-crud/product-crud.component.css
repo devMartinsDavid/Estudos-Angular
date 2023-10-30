@@ -1,0 +1,15 @@
+.container{
+    margin: 10px auto auto auto;
+}
+.footer{
+    margin: 10px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+}
+mat-card-header{ 
+    display: flex;
+    justify-content: center;
+}
+img{
+    height: 200px;
+}
