@@ -12,7 +12,6 @@ import { ProductUpdateComponent } from './components/product/product-update/prod
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 
 const routes: Routes = [
- 
   {
     path: '', component: LoginComponent
   },

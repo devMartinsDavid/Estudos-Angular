@@ -12,9 +12,7 @@ export class HeaderService {
     icon: 'home',
     routeUrl: ''
   })
-  
   constructor() { }
-  
   get headerData(): HeaderData{
     return this._headerData.value
   }
