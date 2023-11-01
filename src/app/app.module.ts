@@ -1,12 +1,12 @@
-//Module
 import { NgModule } from '@angular/core';
+//Module
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
 
-//client 
+//client
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -40,6 +40,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { RedDirective } from './shared/directives/red.directive'
 import { ForDirective } from './shared/directives/for.directive'
 import { ValidationsDirective } from './shared/directives/validations.directive'
+
+
 //services
 import { ProductService } from './services/product.service';
 import { HeaderService } from './services/header.service';
@@ -79,6 +81,7 @@ import { HeaderService } from './services/header.service';
     MatFormFieldModule,
     MatInputModule,
     MatPaginatorModule,
+    
   ],
   providers: [
     ProductService,
