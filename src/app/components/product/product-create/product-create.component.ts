@@ -14,12 +14,11 @@ export class ProductCreateComponent {
   constructor(private productService: ProductService, private router: Router) {}
 
   createProduct(): void {
-    try {
-      this.productService.create(this.product);
+    if (this.productService.create(this.product)) {
       this.productService.showMenssage('Produto criado com Sucesso!');
       this.router.navigate(['/products']);
-    } catch (error) {
-      console.error('Erro ao criar o produto:', error);
+    } else {
+      console.error('Erro ao criar o produto');
     }
   }
 

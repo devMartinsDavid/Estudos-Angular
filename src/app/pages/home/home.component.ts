@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, Renderer2} from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, AfterViewInit } from '@angular/core';
 import { HeaderService } from 'src/app/services/header.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { HeaderService } from 'src/app/services/header.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit {
   titleText = "Bem Vindo!";
   subtitleText = "-Sistema para exemplificar a construção de um cadastro de produto com Angular-";
   typedTitle = "";
@@ -14,17 +14,24 @@ export class HomeComponent implements OnInit {
   charIndexTitle = 0;
   charIndexSubtitle = 0;
 
-  constructor(private headerService: HeaderService, private renderer: Renderer2,
-     private el: ElementRef) {
-      headerService.headerData = {
-        title: 'Início',
-        icon: 'home',
-        routeUrl: ''
-      }
+  constructor(private headerService: HeaderService, private renderer: Renderer2, private el: ElementRef) {
+    headerService.headerData = {
+      title: 'Início',
+      icon: 'home',
+      routeUrl: ''
+    }
   }
+
   ngOnInit(): void {
-    this.typeTitleAndSubtitle();
+    // Inicializações que não afetam o DOM, podem permanecer no ngOnInit
   }
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.typeTitleAndSubtitle();
+    }, 0);
+  }
+
   typeTitleAndSubtitle() {
     const maxIndex = Math.max(this.titleText.length, this.subtitleText.length);
     const interval = setInterval(() => {
@@ -39,6 +46,6 @@ export class HomeComponent implements OnInit {
       if (this.charIndexTitle >= this.titleText.length && this.charIndexSubtitle >= this.subtitleText.length) {
         clearInterval(interval);
       }
-    },80);
+    }, 80);
   }
 }
