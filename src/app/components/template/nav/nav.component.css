@@ -1,3 +1,4 @@
+
 .sidenave{
     background-color: rgb(4, 100, 226);
     width: 200px;
@@ -11,4 +12,21 @@
 
 .content {
     padding: 16px;
+}
+.sidenave.mobile {
+    position: static;
+    margin:0;
+    width: 100%;
+}
+.mobile-conteudo{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+@media screen and (max-width:599px) {
+    .container-nav-mobile{
+        background-color:  rgb(4, 100, 226);
+        height: 110px;
+    }
 }

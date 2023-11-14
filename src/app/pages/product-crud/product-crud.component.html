@@ -1,14 +1,14 @@
-<div class="mat-elevation-z4 margim-top">
+<div class="mat-elevation-z4 container">
     <mat-card>
         <mat-card-header>
-            <mat-card-title >
+            <mat-card-title>
                 Lista de produtos
             </mat-card-title>
         </mat-card-header>
-        <img  class="img-fluid" src="assets/image/imagem-exemplo-table.png" alt="imagem-exemplo">
-        <mat-card-content class="container">
-            <app-product-read></app-product-read>
-        </mat-card-content>
+        <img src="assets/image/imagem-exemplo-table.png" alt="imagem-exemplo">
+        
+        <app-product-read></app-product-read>
+        
         <mat-card-footer class="footer">
             <button mat-raised-button (click)="navegateToProductCreat()"
             class="btn btn-primary"
@@ -16,7 +16,3 @@
         </mat-card-footer>
     </mat-card>
 </div>
-
-
-
-

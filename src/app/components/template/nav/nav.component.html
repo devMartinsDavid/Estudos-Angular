@@ -1,26 +1,42 @@
-<mat-sidenav-container class="container-nav">
-    <mat-sidenav class="sidenave" mode="side" opened fixedInViewport="true" fixedTopGap="64">
-        <mat-nav-list class="nav-list">
-            <a mat-list-item routerLink="/home">
-                <i class="material-icons">
-                    home
-                </i>
-                    Início
-            </a>
-            <a mat-list-item routerLink="/products"
-            >
-                <i class="material-icons">
-                    storefront
-                </i>
-                Produtos
-            </a>
-            
-        </mat-nav-list>
+<div id="container">
+    <mat-sidenav-container class="container-nav" *ngIf="!isMobile">
+        <mat-sidenav class="sidenave" mode="side"
+        opened fixedInViewport="true" fixedTopGap="64">
+            <mat-nav-list class="nav-list">
+                <a mat-list-item routerLink="/home">
+                    <i class="material-icons">
+                        home
+                    </i>
+                        Início
+                </a>
+                <a mat-list-item routerLink="/products">
+                    <i class="material-icons">
+                        storefront
+                    </i>
+                    Produtos
+                </a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <div class="content">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-container>
+</div>
+
+<div *ngIf="isMobile">
+    <div class="container-nav-mobile">
+        <mat-sidenav class="sidenave" mode="side"
+        [class.mobile]="isMobile"
+        opened fixedInViewport="true" fixedTopGap="64">
+            <mat-nav-list class="nav-list">
+                <a mat-list-item routerLink="/home"> <i class="material-icons"> home </i> Início </a>
+                <a mat-list-item routerLink="/products"> <i class="material-icons"> storefront </i> Produtos </a>
+            </mat-nav-list>
+        </mat-sidenav>
         
-    </mat-sidenav>
-    
-    <mat-sidenav-content class="content">
-        <router-outlet></router-outlet>
-    </mat-sidenav-content>
-</mat-sidenav-container>
+        <div class="content" [ngClass]="{'mobile-conteudo': isMobile}">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
 

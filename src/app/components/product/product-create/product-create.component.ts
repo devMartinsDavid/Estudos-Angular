@@ -10,18 +10,19 @@ import { Product } from 'src/app/shared/models/product.model';
 })
 export class ProductCreateComponent {
   product: Product = { id: 0, name: '', price: 0 };
-
-  constructor(private productService: ProductService, private router: Router) {}
+  constructor(private productService: ProductService, private router: Router) { }
 
   createProduct(): void {
-    if (this.productService.create(this.product)) {
-      this.productService.showMenssage('Produto criado com Sucesso!');
-      this.router.navigate(['/products']);
-    } else {
-      console.error('Erro ao criar o produto');
-    }
-  }
 
+    if (this.product.name && this.product.price) {
+
+      if (this.productService.create(this.product)) {
+        this.productService.showMenssage('Produto criado com Sucesso!');
+        this.router.navigate(['/products']);
+      } else {console.error('Erro ao criar o produto');}
+
+    } else {alert('Os campos nome e preço são obrigatórios');}
+  }
   cancel(): void {
     this.router.navigate(['/products']);
   }

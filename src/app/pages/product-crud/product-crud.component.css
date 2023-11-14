@@ -1,15 +1,29 @@
 .container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     margin: 10px auto auto auto;
 }
 .footer{
+    position: static;
     margin: 10px 0px 0px 0px;
     display: flex;
     justify-content: center;
 }
-mat-card-header{ 
+mat-card-header{
     display: flex;
     justify-content: center;
 }
 img{
   height: 200px;
+  width: 100%;
 }
+
+@media screen and (max-width:599px) {
+    mat-card{
+        /* margin-left: -15px;
+        margin-right: 17px; */
+        margin-bottom: 50px;
+    }
+}
+
